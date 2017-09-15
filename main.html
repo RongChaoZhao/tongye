@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同业金融服务平台</title>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <style>
+        #main_tap .item{
+            margin-top: -8px;
+            cursor: pointer;
+        }
+        #main_tap li.active {
+            background: #0085cc;
+        }
+        #main_tap li.active a{
+            color: #ffffff;
+        }
+        #main_tap li.active .a:hover{
+            color: #ffffff;
+            background: #0085cc;
+        }
+
+        .ui.tiny.buttons .active.button{
+            color: #ffffff;
+            background: #0085cc;
+        }
+    </style>
+</head>
+<body>
+<div class="ui borderless menu">
+    <div class="left menu">
+        <div class="item">
+            <img class="ui small image" src="images/logo.png" />
+        </div>
+    </div>
+    <div class="small menu before_login">
+        <ul class="ui tabular menu" id="main_tap" >
+            <li class="active item" data-tab="mainTab">
+                <a id="main"  ><!--<i class="large user icon"></i>-->首页</a>
+            </li>
+            <li class="item" data-tab="deposit">
+                <a><!--<i class="large credit card alternative icon"></i>-->同业存款 </a>
+            </li>
+            <li class="item" data-tab="finance">
+                <a> 同业理财 </a>
+            </li>
+            <li class="item" data-tab="manage">
+                <a> 产品发布管理 </a>
+            </li>
+            <li class="item" data-tab="advisory">
+                <a> 咨询中心 </a>
+            </li>
+            <li class="item" data-tab="member">
+                <a> 会员机构 </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!--<div class="ui bottom attached tab segment" data-tab="main_page">First </div>
+<div class="ui bottom attached tab segment" data-tab="deposit">Second </div>-->
+<!--登录前 首页-->
+<!--<div class="ui bottom attached tab segment" data-tab="mainTab">
+    <img class="ui fluid image" src="images/ad.png" alt="">
+    <div class="ui segment">
+        <div class="ui segment">
+            <div class="ui small header"><i class="tags red icon"></i>同业理财产品</div>
+            <div class="ui three column center aligned stackable divided grid">
+                <div class="column">
+                    <div class="image dimmable">
+                        <div class="ui dimmer transition hidden" style="display: none;">
+                            <div class="content">
+                                <div class="center">
+                                    <div class="ui inverted middle header">招财进宝之鼎鼎成金</div>
+                                    <div class="ui inverted huge header">5.26%</div>
+                                    <div class="ui inverted small header">预计年化收益率</div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="ui fluid image" src="images/pro_box1.jpg" alt="">
+                    </div>
+                    <div class="ui clearing borderless segment">
+                        <div class="ui small left floated header">期&nbsp;&nbsp;限<div class="sub header">60&nbsp;&nbsp;天</div>
+                        </div>
+                        <div class="ui small right floated header">起&nbsp;&nbsp;购 <div class="sub header"><i class="yen icon"></i>500,000</div>
+                        </div>
+                    </div>
+                    <div class="ui green progress" data-percent="35" id="progress1">
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="ui red  animated fade button">
+                        <div class="visible content"><i class="yen icon"></i>500,000</div>
+                        <div class="hidden content">
+                            <i class="add to cart icon"></i>立即购买
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image dimmable">
+                        <div class="ui dimmer transition hidden" style="display: none;">
+                            <div class="content">
+                                <div class="center">
+                                    <div class="ui inverted middle header">鑫喜系列惠嘉</div>
+                                    <div class="ui inverted huge header">5.66%</div>
+                                    <div class="ui inverted small header">预计年化收益率</div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="ui fluid image" src="images/pro_box3.jpg" alt="">
+                    </div>
+                    <div class="ui clearing borderless segment">
+                        <h2 class="ui small left floated header">期&nbsp;&nbsp;限<div class="sub red header">60&nbsp;&nbsp;天</div>
+                        </h2>
+                        <h2 class="ui small right floated header">起&nbsp;&nbsp;购 <div class="sub red header"><i class="yen icon"></i>500,000</div>
+                        </h2>
+                    </div>
+                    <div class="ui green progress" data-percent="45" id="progress2">
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="ui red animated fade button">
+                        <div class="visible content"><i class="yen icon"></i>600,000</div>
+                        <div class="hidden content">
+                            <i class="add to cart icon"></i>立即购买
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image dimmable">
+                        <div class="ui dimmer transition hidden" style="display: none;">
+                            <div class="content">
+                                <div class="center">
+                                    <div class="ui inverted middle header">招财进宝之鼎鼎成金</div>
+                                    <div class="ui inverted huge header">5.26%</div>
+                                    <div class="ui inverted small header">预计年化收益率</div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="ui fluid image" src="images/pro_box2.jpg" alt="">
+                    </div>
+                    <div class="ui clearing borderless segment">
+                        <h2 class="ui small left floated header">期&nbsp;&nbsp;限<div class="sub header">60&nbsp;&nbsp;天</div>
+                        </h2>
+                        <h2 class="ui small right floated header">起&nbsp;&nbsp;购 <div class="sub header"><i class="yen icon"></i>500,000</div>
+                        </h2>
+                    </div>
+                    <div class="ui green progress" data-percent="75" id="progress3">
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="ui red  animated fade button">
+                        <div class="visible content"><i class="yen icon"></i>700,000</div>
+                        <div class="hidden content">
+                            <i class="add to cart icon"></i>立即购买
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui segment">
+            <div class="ui small header"><i class="line chart red icon"></i>同业存放报价</div>
+            <table class="ui celled striped table">
+                <thead>
+                <tr>
+                    <th colspan="1">发布机构</th>
+                    <th colspan="1">产品期限</th>
+                    <th colspan="1">利率 </th>
+                    <th colspan="1">起息日 </th>
+                    <th colspan="1">操作 </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>中原银行</td>
+                    <td>3个月</td>
+                    <td>3.0%</td>
+                    <td>2017.03.06</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                        <button class="ui blue button" data-tooltip="点击购买理财产品" data-position="top center"><i class="add to cart icon"></i> 买 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>中原银行</td>
+                    <td>3个月</td>
+                    <td>3.0%</td>
+                    <td>2017.03.06</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                        <button class="ui blue button" data-tooltip="点击购买理财产品" data-position="top center"><i class="add to cart icon"></i> 买 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>中原银行</td>
+                    <td>3个月</td>
+                    <td>3.0%</td>
+                    <td>2017.03.06</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                        <button class="ui blue button" data-tooltip="点击购买理财产品" data-position="top center"><i class="add to cart icon"></i> 买 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>中原银行</td>
+                    <td>3个月</td>
+                    <td>3.0%</td>
+                    <td>2017.03.06</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                        <button class="ui blue button" data-tooltip="点击购买理财产品" data-position="top center"><i class="add to cart icon"></i> 买 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>中原银行</td>
+                    <td>3个月</td>
+                    <td>3.0%</td>
+                    <td>2017.03.06</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                        <button class="ui blue button" data-tooltip="购买理财产品" data-position="top center"><i class="add to cart icon"></i> 买 </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="ui divided grid">
+            <div class="two column row">
+                <div class="column">
+                    <div class="ui items">
+                        <div class="item">
+                            <div class="image">
+                                <img class="top aligned image" src="images/foot_img1.jpg">
+                            </div>
+                            <div class="content">
+                                <div class=" content">
+                                    <h3 class="ui small left floated header">
+                                        <i class="volume down icon"></i>
+                                        <div class="content">平台公告</div>
+                                    </h3>
+                                    <h5 class="ui grey right floated header">
+                                        <div class="content"><a href="">查看更多</a></div>
+                                    </h5>
+                                </div>
+                                <div class="meta">
+                                    <span><br><div class="ui divider"></div></span>
+                                </div>
+                                <div class="extra">
+                                    <div class="ui left aligned stackable link list">
+                                        <a class="item">中原银行鼎盛财富2017年第91-102期人民币 拷贝</a>
+                                        <a class="item">中原银行鼎盛财富2017年第91-102期人民币 拷贝</a>
+                                        <a class="item">中原银行鼎盛财富2017年第91-102期人民币 拷贝</a>
+                                        <a class="item">中原银行鼎盛财富2017年第91-102期人民币 拷贝</a>
+                                        <a class="item">中原银行鼎盛财富2017年第91-102期人民币 拷贝</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui items">
+                        <div class="item">
+                            <div class="image">
+                                <img class="top aligned image" src="images/foot_img1.jpg">
+                            </div>
+                            <div class="content">
+                                <h3 class="ui small left floated header">
+                                    <i class="volume down icon"></i>
+                                    <div class="content">咨询信息</div>
+                                </h3>
+                                <h5 class="ui grey right floated header">
+                                    <div class="content"><a href="">查看更多</a></div>
+                                </h5>
+                                <div class="meta">
+                                    <span><br><div class="ui divider"></div></span>
+                                </div>
+                                <div class="extra">
+                                    <div class="ui left aligned stackable link list">
+                                        <a class="item">中原银行鼎盛财富2017年第91-102期人民币 拷贝</a>
+                                        <a class="item">中原银行鼎盛财富2017年第91-102期人民币 拷贝</a>
+                                        <a class="item">中原银行鼎盛财富2017年第91-102期人民币 拷贝</a>
+                                        <a class="item">中原银行鼎盛财富2017年第91-102期人民币 拷贝</a>
+                                        <a class="item">中原银行鼎盛财富2017年第91-102期人民币 拷贝</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!--登录后-->
+<!--同业存款-->
+<!--<div class="ui bottom attached tab" data-tab="deposit">
+    <div id="second_tap" class="ui top attached tabular center eight item menu" style="background: #0085cc;margin-top: -15px">
+        <a class="active item" data-tab="ty_query">同业产品查询</a>
+        <a class="item" data-tab="ty_manage">同业交易管理</a>
+        <a class="item" data-tab="ty_change">同业交易变更</a>
+        <a class="item" data-tab="ty_create">同存手工创建</a>
+    </div>
+    &lt;!&ndash;同存产品查询&ndash;&gt;
+    <div class="ui bottom attached tab active segment" style="margin-top: 20px" data-tab="ty_query">
+        <div class="ui stackable center aligned page grid">
+            <div class="ui form">
+                <div class="inline two fields">
+                    <div class="field">
+                        <label>报价方：</label>
+                        <input type="text" placeholder="报价方">
+                    </div>
+                </div>
+                <div class="field">
+                    <lable>产品范围：</lable>
+                    <div class="ui tiny buttons">
+                        <div class="ui active button">全部</div>
+                        <div class="ui button">推荐</div>
+                    </div>
+                </div>
+                <div class="field">
+                    <lable>方&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;向：</lable>
+                    <div class="ui tiny buttons">
+                        <div class="ui active button">全部</div>
+                        <div class="ui button">融入</div>
+                        <div class="ui button">融出</div>
+                    </div>
+                </div>
+                <div class="field">
+                    <lable>种&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类：</lable>
+                    <div class="ui tiny buttons">
+                        <div class="ui active button">全部</div>
+                        <div class="ui button">银行同存</div>
+                        <div class="ui button">非银同存</div>
+                    </div>
+                </div>
+                <div class="field">
+                    <lable>期&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;限：</lable>
+                    <div class="ui tiny buttons">
+                        <div class="ui active button">全部</div>
+                        <div class="ui button">隔夜</div>
+                        <div class="ui button">7天</div>
+                        <div class="ui button">14天</div>
+                        <div class="ui button">21天</div>
+                        <div class="ui button">3个月</div>
+                        <div class="ui button">6个月</div>
+                        <div class="ui button">12个月</div>
+                    </div>
+                </div>
+
+                <div class="inline two fields">
+                    <label>金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额：</label>
+                    <input type="text">——<input type="text">亿&nbsp;元
+                </div>
+                <div class="inline two fields">
+                    <label>利&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;率：</label>
+                    <input type="text">——<input type="text">%
+                </div>
+                <div class="ui fluid primary button">查  询</div>
+            </div>
+            <table class="ui striped celled table">
+                <thead>
+                <tr>
+                    <th>报价方</th>
+                    <th>方向</th>
+                    <th>种类</th>
+                    <th>币种</th>
+                    <th>期限</th>
+                    <th>利率</th>
+                    <th>额度</th>
+                    <th>发布时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        中原银行股份有限公司
+                    </td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>人民币</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                        <button class="ui blue button" data-tooltip="购买理财产品" data-position="top center"><i class="add to cart icon"></i> 买 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        中原银行股份有限公司
+                    </td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>人民币</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                        <button class="ui blue button" data-tooltip="购买理财产品" data-position="top center"><i class="add to cart icon"></i> 买 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        中原银行股份有限公司
+                    </td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>人民币</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                        <button class="ui blue button" data-tooltip="购买理财产品" data-position="top center"><i class="add to cart icon"></i> 买 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        中原银行股份有限公司
+                    </td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>人民币</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                        <button class="ui blue button" data-tooltip="购买理财产品" data-position="top center"><i class="add to cart icon"></i> 买 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        中原银行股份有限公司
+                    </td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>人民币</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                        <button class="ui blue button" data-tooltip="购买理财产品" data-position="top center"><i class="add to cart icon"></i> 买 </button>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="9">
+                        <div class="ui right floated pagination menu">
+                            <a class="icon item">
+                                <i class="left chevron icon"></i>
+                            </a>
+                            <a class="item">1</a>
+                            <a class="item">2</a>
+                            <a class="item">3</a>
+                            <a class="item">4</a>
+                            <a class="icon item">
+                                <i class="right chevron icon"></i>
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    &lt;!&ndash;同存交易管理&ndash;&gt;
+    <div class="ui bottom attached tab segment" style="margin-top: 20px" data-tab="ty_manage">
+        <div class="ui stackable center aligned page grid">
+            <div class="ui form">
+                <div class="inline two fields">
+                    <div class="field">
+                        <label>报价方：</label>
+                        <input type="text" placeholder="报价方">
+                    </div>
+                </div>
+                <div class="field">
+                    <lable>方向：</lable>
+                    <div class="ui tiny buttons">
+                        <div class="ui active button">全部</div>
+                        <div class="ui button">融入</div>
+                        <div class="ui button">融出</div>
+                    </div>
+                </div>
+                <div class="field">
+                    <lable>种类：</lable>
+                    <div class="ui tiny buttons">
+                        <div class="ui active button">全部</div>
+                        <div class="ui button">银行同存</div>
+                        <div class="ui button">非银同存</div>
+                    </div>
+                </div>
+                <div class="field">
+                    <lable>期限：</lable>
+                    <div class="ui tiny buttons">
+                        <div class="ui active button">全部</div>
+                        <div class="ui button">隔夜</div>
+                        <div class="ui button">7天</div>
+                        <div class="ui button">14天</div>
+                        <div class="ui button">21天</div>
+                        <div class="ui button">3个月</div>
+                        <div class="ui button">6个月</div>
+                        <div class="ui button">12个月</div>
+                    </div>
+                </div>
+
+                <div class="inline two fields">
+                    <label>金&nbsp;额：</label>
+                    <input type="text">——<input type="text">亿&nbsp;元
+                </div>
+                <div class="inline two fields">
+                    <label>利&nbsp;率：</label>
+                    <input type="text">——<input type="text">%
+                </div>
+                <div class="ui fluid primary button">查  询</div>
+            </div>
+
+            <table class="ui striped celled table">
+                <thead>
+                <tr>
+                    <th>交易流水号</th>
+                    <th>报价方</th>
+                    <th>方向</th>
+                    <th>种类</th>
+                    <th>期限</th>
+                    <th>利率</th>
+                    <th>金额</th>
+                    <th>交易时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>201703032221</td>
+                    <td>中原银行股份有限公司</td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td>收款</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>201703032221</td>
+                    <td>中原银行股份有限公司</td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td>收款</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>201703032221</td>
+                    <td>中原银行股份有限公司</td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td>收款</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>201703032221</td>
+                    <td>中原银行股份有限公司</td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td>收款</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>201703032221</td>
+                    <td>中原银行股份有限公司</td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td>收款</td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="10">
+                        <div class="ui right floated pagination menu">
+                            <a class="icon item">
+                                <i class="left chevron icon"></i>
+                            </a>
+                            <a class="item">1</a>
+                            <a class="item">2</a>
+                            <a class="item">3</a>
+                            <a class="item">4</a>
+                            <a class="icon item">
+                                <i class="right chevron icon"></i>
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    &lt;!&ndash;同存交易变更&ndash;&gt;
+    <div class="ui bottom attached tab segment" style="margin-top: 20px" data-tab="ty_change">
+        <div class="ui stackable center aligned page grid">
+            <div class="ui form">
+                <div class="inline two fields">
+                    <div class="field">
+                        <label>申请方：</label>
+                        <input type="text" placeholder="申请方">
+                    </div>
+                </div>
+                <div class="field">
+                    <lable>方向：</lable>
+                    <div class="ui tiny buttons">
+                        <div class="ui active button">全部</div>
+                        <div class="ui button">融入</div>
+                        <div class="ui button">融出</div>
+                    </div>
+                </div>
+                <div class="field">
+                    <lable>种类：</lable>
+                    <div class="ui tiny buttons">
+                        <div class="ui active button">全部</div>
+                        <div class="ui button">银行同存</div>
+                        <div class="ui button">非银同存</div>
+                    </div>
+                </div>
+                <div class="field">
+                    <lable>期限：</lable>
+                    <div class="ui tiny buttons">
+                        <div class="ui active button">全部</div>
+                        <div class="ui button">隔夜</div>
+                        <div class="ui button">7天</div>
+                        <div class="ui button">14天</div>
+                        <div class="ui button">21天</div>
+                        <div class="ui button">3个月</div>
+                        <div class="ui button">6个月</div>
+                        <div class="ui button">12个月</div>
+                    </div>
+                </div>
+
+                <div class="inline two fields">
+                    <label>金&nbsp;额：</label>
+                    <input type="text">——<input type="text">亿&nbsp;元
+                </div>
+                <div class="inline two fields">
+                    <label>利&nbsp;率：</label>
+                    <input type="text">——<input type="text">%
+                </div>
+                <div class="ui fluid primary button">查  询</div>
+            </div>
+            <table class="ui striped celled table">
+                <thead>
+                <tr>
+                    <th>交易流水号</th>
+                    <th>申请方</th>
+                    <th>方向</th>
+                    <th>种类</th>
+                    <th>期限</th>
+                    <th>利率</th>
+                    <th>金额</th>
+                    <th>交易时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        201703265221
+                    </td>
+                    <td>中原银行</td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td></td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        201703265221
+                    </td>
+                    <td>中原银行</td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td></td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        201703265221
+                    </td>
+                    <td>中原银行</td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td></td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        201703265221
+                    </td>
+                    <td>中原银行</td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td></td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        201703265221
+                    </td>
+                    <td>中原银行</td>
+                    <td>收</td>
+                    <td>银行同存</td>
+                    <td>7天</td>
+                    <td>4.95%</td>
+                    <td>5亿元</td>
+                    <td>2017-08-11</td>
+                    <td></td>
+                    <td>
+                        <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="10">
+                        <div class="ui right floated pagination menu">
+                            <a class="icon item">
+                                <i class="left chevron icon"></i>
+                            </a>
+                            <a class="item">1</a>
+                            <a class="item">2</a>
+                            <a class="item">3</a>
+                            <a class="item">4</a>
+                            <a class="icon item">
+                                <i class="right chevron icon"></i>
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    &lt;!&ndash;同存手工创建&ndash;&gt;
+    <div class="ui bottom attached tab segment" style="margin-top: 20px" data-tab="ty_create">
+        <div class="ui stackable center aligned page grid">
+            <div class="ui form">
+                <div class="two fields">
+                    <div class="field">
+                        <label>期限类型：</label>
+                        <div class="ui selection dropdown" tabindex="0">
+                            <div class="default text">Select</div>
+                            <i class="dropdown icon"></i>
+                            <input type="hidden" name="hidden-field">
+                            <div class="menu" tabindex="-1">
+                                <div data-value="1" class="item">Choice 1</div>
+                                <div data-value="2" class="item">Choice 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>产品类型：</label>
+                        <input type="text" placeholder="产品类型">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!--同业理财-->
+<!--<div class="ui bottom attached tab segment" data-tab="finance">
+    <div class="ui stackable center aligned page grid">
+        <div class="ui form">
+            <div class="inline two fields">
+                <div class="field">
+                    <label>报价方：</label>
+                    <input type="text" placeholder="报价方">
+                </div>
+                <div class="field">
+                    <label>产品名：</label>
+                    <input type="text" placeholder="产品名称">
+                </div>
+            </div>
+            <div class="field">
+                <lable>保本性质：</lable>
+                <div class="ui tiny buttons">
+                    <div class="ui active button">全部</div>
+                    <div class="ui button">保本</div>
+                    <div class="ui button">非保本</div>
+                </div>
+            </div>
+            <div class="field">
+                <lable>期&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;限：</lable>
+                <div class="ui tiny buttons">
+                    <div class="ui active button">35天以内</div>
+                    <div class="ui button">36-95天</div>
+                    <div class="ui button">95-185天</div>
+                    <div class="ui button">186-365天</div>
+                    <div class="ui button">365天以上</div>
+                </div>
+            </div>
+            <div class="field">
+                <lable>产品范围：</lable>
+                <div class="ui tiny buttons">
+                    <div class="ui active button">全部</div>
+                    <div class="ui button">推荐</div>
+                </div>
+            </div>
+            <div class="inline two fields">
+                <label>金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额：</label>
+                <input type="text">——<input type="text">亿&nbsp;元
+            </div>
+            <div class="inline two fields">
+                <label>利&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;率：</label>
+                <input type="text">——<input type="text">%
+            </div>
+            <div class="ui fluid primary button">查  询</div>
+        </div>
+        <table class="ui striped celled table">
+            <thead>
+                <tr>
+                    <th>产品名称</th>
+                    <th>报价方</th>
+                    <th>保本性质</th>
+                    <th>风险等级</th>
+                    <th>期限</th>
+                    <th>利率</th>
+                    <th>金额</th>
+                    <th>发布日期</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="ui green ribbon label">荐</div>鼎盛中原
+                </td>
+                <td>中原银行股份有限公司</td>
+                <td>非保本</td>
+                <td>R2</td>
+                <td>60天</td>
+                <td>4.95%-5.05%</td>
+                <td>5亿元</td>
+                <td>2017-08-11</td>
+                <td>
+                    <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ui green ribbon label">荐</div>鼎盛中原
+                </td>
+                <td>中原银行股份有限公司</td>
+                <td>非保本</td>
+                <td>R2</td>
+                <td>60天</td>
+                <td>4.95%-5.05%</td>
+                <td>5亿元</td>
+                <td>2017-08-11</td>
+                <td>
+                    <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center"><i class="users icon"></i> 谈 </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ui green ribbon label">荐</div>鼎盛中原
+                </td>
+                <td>中原银行股份有限公司</td>
+                <td>非保本</td>
+                <td>R2</td>
+                <td>60天</td>
+                <td>4.95%-5.05%</td>
+                <td>5亿元</td>
+                <td>2017-08-11</td>
+                <td>
+                    <button class="ui green button" data-tooltip="点击可以咨询理财经理" data-position="top center">
+                        <i class="users icon"></i> 谈
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="9">
+                        <div class="ui right floated pagination menu">
+                            <a class="icon item">
+                                <i class="left chevron icon"></i>
+                            </a>
+                            <a class="item">1</a>
+                            <a class="item">2</a>
+                            <a class="item">3</a>
+                            <a class="item">4</a>
+                            <a class="icon item">
+                                <i class="right chevron icon"></i>
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>-->
+<!--产品发布管理-->
+<!--<div class="ui bottom attached tab" data-tab="manage">
+    <div id="third_tap" class="ui top attached tabular center eight item menu" style="background: #0085cc;margin-top: -15px">
+        <a class="active item" data-tab="first">产品创建</a>
+        <a class="item" data-tab="second">同业存款管理</a>
+        <a class="item" data-tab="third">同业存款审批</a>
+        <a class="item" data-tab="four">同业理财管理</a>
+        <a class="item" data-tab="four">同业理财审批</a>
+    </div>
+    <div class="ui bottom attached tab active segment" style="margin-top: 20px" data-tab="first">
+        <div class="ui centered page grid" style="height: 260px;margin-top: 50px">
+            <div class="fourteen wide column">
+                <div class="ui two column center aligned stackable divided grid">
+                    <div class="column">
+                        <div class="ui icon header">
+                            <i class="teal download icon"></i>
+                        </div>
+                        <p>这是一个简介</p>
+                        <p>
+                            <a class="ui green button" href="#">
+                                同业存款
+                            </a>
+                        </p>
+                    </div>
+                    <div class="column">
+                        <div class="ui icon header">
+                            <i class="teal credit card alternative icon"></i>
+                        </div>
+                        <p>这是一个简介</p>
+                        <p>
+                            <a class="ui green button" href="#">
+                                定制理财
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!--咨询中心-->
+<!--<div class="ui bottom attached tab" data-tab="advisory">
+    <div class="ui stackable ui center aligned segment grid">
+        <div class="ui segment">开发中..</div>
+    </div>
+</div>-->
+<!--会员机构-->
+<!--<div class="ui bottom attached tab" data-tab="member">
+    <div class="ui stackable ui center aligned segment grid">
+        <div class="ui segment">开发中..</div>
+    </div>
+</div>-->
+<!--底部-->
+<div class="ui inverted footer vertical very padded segment">
+    <div class="ui stackable center aligned page grid">
+        <div class="ten wide column">
+            <div class="ui left aligned stackable inverted horizontal link list">
+                <a class="item">帮助中心</a>
+                <a class="item">银行咨询</a>
+                <a class="item">联系我们</a>
+                <a class="item">自助服务</a>
+                <a class="item">银行邮箱</a>
+            </div>
+            <div class="ui stackable left inverted horizontal link list">
+                <div class="item">
+                    <h5 class="ui center aligned icon ">
+                        <img class="ui image" src="images/ebar.jpg" alt="">
+                        <a class="item">官方微博</a>
+                    </h5>
+                </div>
+                <div class="item">
+                    <h5 class="ui center aligned icon ">
+                        <img class="ui image" src="images/ebar.jpg" alt="">
+                        <a class="item">公众号</a>
+                    </h5>
+                </div>
+                <div class="item">
+                    <h5 class="ui center aligned icon ">
+                        <img class="ui image" src="images/ebar.jpg" alt="">
+                        <a class="item">直销银行</a>
+                    </h5>
+                </div>
+                <div class="item">
+                    <h5 class="ui center aligned icon ">
+                        <img class="ui image" src="images/ebar.jpg" alt="">
+                        <a class="item">手机银行</a>
+                    </h5>
+                </div>
+            </div>
+            <!--<h2 class="ui grey header">
+                <i class="phone grey icon"></i>
+                <div class="content ">
+                    <div class="sub header" style="color: gainsboro;">24小时<br>客服热线</div>
+                </div>
+            </h2>-->
+        </div>
+        <!--<div class="eight wide column">
+
+        </div>-->
+    </div>
+</div>
+<div class="ui inverted aligned footer vertical black segment">
+    <div class="ui stackable center aligned page grid">
+        <div class="ui stackable inverted link list">
+            <a class="item">中原银行 CopyRight@豫ICP备14022039</a>
+        </div>
+    </div>
+</div>
+<!--登录框-->
+<div class="ui modal" id="login">
+    <i class="close icon"></i>
+    <div class="header">
+    </div>
+    <div class="image content">
+        <div class="ui large image">
+            <img src="images/log_pic.jpg">
+        </div>
+        <div class="description">
+            <div class="ui form">
+                <div class="ui dividing header">登录<div class="ui sub header">轻松一步,登录服务平台！</div></div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <input type="text" placeholder="请输入用户名">
+                        <i class="user icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <input type="text" placeholder="请输入密码">
+                        <i class="lock icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui input">
+                        <input type="text" placeholder="请输入验证码">
+                        <img src="images/yzm.jpg" class="ui tiny image"/>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="field">
+                        <div class="ui bottom attached primary button" >登录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--登录-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/semantic.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#progress1").progress();
+        $("#progress2").progress();
+        $("#progress3").progress();
+        $('#login_btn').on('click',function (e) {
+            e.preventDefault();
+            $('#login').modal('show');
+        });
+        $('.ui .dimmer')
+            .dimmer({
+                on: 'hover'
+            });
+        $("#main").bind( "click", function () {
+            $(this).tab();
+        } );
+        setTimeout(function(){
+            $("#main").trigger('click');
+        },10);
+
+
+        $('.ui.tabular.menu a.item')
+            .on('click', function() {
+                if(!$(this).hasClass('dropdown')) {
+                    $(this)
+                        .addClass('active')
+                        .closest('.ui.menu')
+                        .find('.item')
+                        .not($(this))
+                        .removeClass('active');
+                }
+            });
+        $('.ui.tiny.buttons .ui.button')
+            .on('click', function() {
+                    $(this)
+                        .addClass('active')
+                    $(this).siblings().removeClass('active');
+            });
+        $('.ui.tabular.menu li.item').on('click', function() {
+            $(this)
+                .addClass('active')
+            $(this).siblings().removeClass('active');
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>理财意向维护</title>
+    <link rel="stylesheet" href="../../css/semantic.min.css">
+    <link rel="stylesheet" href="../../css/calendar.min.css">
+</head>
+<body>
+<div class="ui bottom attached segment" style="margin-top: 20px">
+    <div class="ui aligned center page grid">
+        <div class="column">
+            <div class="ui fluid ordered steps">
+                <div class="completed step">
+                    <div class="content">
+                        <div class="title">意向信息维护</div>
+                        <div class="description">修改理财意向信息</div>
+                    </div>
+                </div>
+                <div class="active step">
+                    <div class="content">
+                        <div class="title">意向维护结果</div>
+                        <div class="description">意向维护结果</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui small form">
+                <div class="two fields">
+                    <div class="field">
+                        <label>产品名称</label>
+                        <input placeholder="产品名称" type="text">
+                    </div>
+                    <div class="field">
+                        <label>发行机构</label>
+                        <input placeholder="发行机构" type="text">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>保本性质</label>
+                        <input placeholder="保本性质" type="text">
+                    </div>
+                    <div class="field">
+                        <label>产品币种</label>
+                        <input placeholder="产品币种" type="text">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>产品金额</label>
+                        <input placeholder="产品金额" type="text">
+                    </div>
+                    <div class="field">
+                        <label>金额大写</label>
+                        <input placeholder="金额大写" type="text">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>产品利率</label>
+                        <input placeholder="产品利率" type="text">
+                    </div>
+                    <div class="field">
+                        <label>产品期限</label>
+                        <input placeholder="产品期限" type="text">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>起息日</label>
+                        <div class="ui calendar" id="startDate">
+                            <div class="ui input left icon">
+                                <i class="calender icon"></i>
+                                <input type="text" placeholder="Date" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>到息日</label>
+                        <div class="ui calendar" id="endData">
+                            <div class="ui input left icon">
+                                <i class="calender icon"></i>
+                                <input type="text" placeholder="Date" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>风险等级</label>
+                    <input placeholder="风险等级" type="text">
+                </div>
+                <div class="field">
+                    <label>产品描述</label>
+                    <textarea name="" id="" cols="30" rows="3"></textarea>
+                </div>
+                <ul class="ui list">
+                    <div class="item">
+                        <div class="three fields">
+                            <div class="field">
+                                <label>申请机构</label>
+                                <input placeholder="申请机构" type="text">
+                            </div>
+                            <div class="field">
+                                <label>申请金额</label>
+                                <input placeholder="申请金额" type="text">
+                            </div>
+                            <div class="field">
+                                <label>申请经办人</label>
+                                <input placeholder="申请经办人" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="three fields">
+                            <div class="field">
+                                <label>申请机构</label>
+                                <input placeholder="申请机构" type="text">
+                            </div>
+                            <div class="field">
+                                <label>申请金额</label>
+                                <input placeholder="申请金额" type="text">
+                            </div>
+                            <div class="field">
+                                <label>申请经办人</label>
+                                <input placeholder="申请经办人" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <div class="ui clearing">
+                    <div class="ui right floated primary submit button">新增联系人</div>
+                </div>
+                <br><br><br>
+                <div class="two fields">
+                    <div class="field">
+                        <div class="ui input">
+                            <input type="text" placeholder="请输入验证码">
+                            <img src="../images/yzm.jpg" class="ui tiny image"/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui action input">
+                            <input type="text" placeholder="请输入验证码">
+                            <button class="ui button">发送短信码</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui left floated submit button">返  回</div>
+                <div class="ui right floated primary submit button">保  存</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/calendar.min.js"></script>
+<script src="../../js/semantic.min.js"></script>
+<script>
+    $('#startDate').calendar({type: 'date'});
+    $('#endDataDate').calendar({type: 'date'});
+    $('#startDate').calendar({
+        type:'date',
+        formatter:{
+            date:function (date,settings) {
+                if(!date)return '';
+                var year = date.getFullYear();
+                var month = date.getMonth();
+                var day = date.getDate();
+                month = month < 10 ? '0'+month : month;
+                day   = day   < 10 ? '0'+day   : day;
+                return year + '-' + month + '-' + day;
+            }
+        }
+    })
+    $('#endData').calendar({
+        type:'date',
+        formatter:{
+            date:function (date,settings) {
+                if(!date)return '';
+                var year = date.getFullYear();
+                var month = date.getMonth();
+                var day = date.getDate();
+                month = month < 10 ? '0'+month : month;
+                day   = day   < 10 ? '0'+day   : day;
+                return year + '-' + month + '-' + day;
+            }
+        }
+    })
+</script>
+</body>
+</html>

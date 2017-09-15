@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同业金融服务平台</title>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../css/semantic.min.css">
+    <style>
+        #main_tap .item{
+            margin-top: -8px;
+        }
+        #main_tap .active.item{
+            color: #ffffff;
+            margin-top: -8px;
+            background: #0085cc;
+        }
+        #main_tap .active.item:hover{
+            color: #ffffff;
+            background: #0085cc;
+        }
+        #second_tap .item,#third_tap .item{
+            margin-top: 5px;
+            height: 30px;
+            color: #ffffff;
+        }
+        #second_tap .active.item,#third_tap .active.item{
+            color: #0085cc;
+            border-radius: 5px;
+            font-weight: 200;
+            background: #ffffff;
+            border-radius: 5px !important;
+        }
+        #second_tap .active.item:hover, #third_tap .active.item:hover{
+            background: #ffffff;
+        }
+        .ui.tiny.buttons .active.button{
+            color: #ffffff;
+            background: #0085cc;
+        }
+    </style>
+</head>
+<body>
+<div class="ui bottom attached manu" data-tab="manage" style="margin-top:15px">
+
+    <div class="ui bottom attached tab active segment" style="margin-top: 20px" data-tab="first">
+        <div class="ui centered page grid" style="height: 260px;margin-top: 50px">
+            <div class="fourteen wide column">
+                <div class="ui two column center aligned stackable divided grid">
+                    <div class="column">
+                        <div class="ui icon header">
+                            <i class="teal download icon"></i>
+                        </div>
+                        <!--<p>这是一个简介</p>-->
+                        <p>
+                            <a class="ui green button" href="#">
+                                同业存款
+                            </a>
+                        </p>
+                    </div>
+                    <div class="column">
+                        <div class="ui icon header">
+                            <i class="teal credit card alternative icon"></i>
+                        </div>
+                        <!--<p>这是一个简介</p>-->
+                        <p>
+                            <a class="ui green button" href="#">
+                                定制理财
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

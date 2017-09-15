@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>member_lygl</title>
+    <link rel="stylesheet" href="../css/semantic.min.css">
+    <style>
+        .ui.tiny.buttons .active.button{
+            color: #ffffff;
+            background: #0085cc;
+        }
+
+    </style>
+</head>
+<body>
+<div class="ui bottom attached tab active segment" style="margin-top: 20px" data-tab="lygl">
+    <div class="ui stackable center aligned page grid" style="margin-top: 50px">
+        <div class="ui form">
+            <div class="ui vertical segment" style="border: 1px solid black;margin-top: 20px;padding: 10px;">
+                <a class="ui blue ribbon label">新建留言</a>
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui label">留言类型</div>
+                    <select class="ui dropdown">
+                        <option value="">请选择</option>
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui label">留言标题</div>
+                    <input type="text" placeholder="">
+                </div>
+            </div>
+            <div class="field" style="margin-top: 10px;padding: 10px" >
+                <a class="ui tag label">留言正文</a>
+                <textarea class="text" rows="10" cols="80">
+
+                </textarea>
+            </div>
+            <!--<div class="ui card" style="padding: 10px" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i></div></div>">-->
+                <!--<div class="content">-->
+                    <!--<div class="header">留言正文</div>-->
+                    <!--<textarea class="input" rows="10" cols="80"></textarea>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="ui fluid primary button">保存</div>
+            </div>
+            <div class="ui vertical segment" style="border: 1px solid black;margin-top: 20px;padding: 10px">
+                <a class="ui blue ribbon label">留言检索</a>
+            <div class="field">
+                <div class="ui right labeled input">
+                    <input type="text" placeholder="请输入留言标题或留言正文的关键词">
+                    <div class="ui label"><i class="search icon"></i> 检索</div>
+                </div>
+            </div>
+            <div class="field" style="margin-top: 20px;padding: 10px;">
+                <textarea class="text" rows="10" cols="80">
+                    留言标题：鼎盛E家正式上线
+                    留言正文：中原银行科技部发来贺电，鼎盛E家正式上线啦。欢迎同业票据部的各位老师来体验一下，鼎盛E家平台
+                    留言回复：
+                </textarea>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/semantic.min.js"></script>
+</body>
+</html>

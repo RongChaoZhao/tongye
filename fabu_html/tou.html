@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/semantic.min.css">
+    <title>产品创建</title>
+    <style>
+        #third_tap.item{
+            margin-top: 5px;
+            height: 30px;
+            color: #ffffff;
+        }
+        #third_tap.active.item{
+            color: #0085cc;
+            border-radius: 5px;
+            font-weight: 200;
+            background: #ffffff;
+            border-radius: 5px !important;
+        }
+        #third_tap.active.item:hover
+        {
+            background: #ffffff;
+        }
+        .ui.tiny.buttons .active.button{
+            color: #ffffff;
+            background: #0085cc;
+        }
+    </style>
+</head>
+<body>
+<div class="ui bottom attached manu" data-tab="manage"  style="margin-top: 15px">
+    <div id="third_tap" class="ui top attached tabular center eight item menu" style="background: #0085cc;margin-top: -15px">
+        <a class="active item" data-tab="first">产品创建</a>
+        <a class="item" data-tab="second">同业存款管理</a>
+        <a class="item" data-tab="third">同业存款审批</a>
+        <a class="item" data-tab="four">同业理财管理</a>
+        <a class="item" data-tab="five">同业理财审批</a>
+    </div>
+</div>
+<script src="../js/semantic.min.js"></script>
+</body>
+</html>

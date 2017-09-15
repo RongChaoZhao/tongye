@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>advisory_nav</title>
+    <link rel="stylesheet" href="../css/semantic.min.css">
+</head>
+<style>
+    #fifth_tap .item{
+        margin-top: 5px;
+        height: 30px;
+        color: #ffffff;
+    }
+    #fifth_tap .active.item{
+        color: #0085cc;
+        border-radius: 5px;
+        font-weight: 200;
+        background: #ffffff;
+        border-radius: 5px !important;
+    }
+    #fifth_tap .active.item:hover{
+        background: #ffffff;
+    }
+    .ui.tiny.buttons .active.button{
+        color: #ffffff;
+        background: #0085cc;
+    }
+</style>
+<body>
+<div class="ui bottom attached manu" data-tab="member" style="margin-top: 15px">
+    <div id="fifth_tap" class="ui top attached tabular center eight item menu" style="background: #0085cc;margin-top:-15px" >
+        <a class="active item" data-tab="wdtcgl">我的同存管理</a>
+        <a class="item" data-tab="wdlcgl">我的理财管理</a>
+        <a class="item" data-tab="lygl">留言管理</a>
+        <a class="item" data-tab="dlmmxg">登录密码修改</a>
+        <a class="item" data-tab="grxxwh">个人信息维护</a>
+    </div>
+</div>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/semantic.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#progress1").progress();
+        $("#progress2").progress();
+        $("#progress3").progress();
+        $('#login_btn').on('click',function (e) {
+            e.preventDefault();
+            $('#login').modal('show');
+        });
+        $('.ui .dimmer')
+            .dimmer({
+                on: 'hover'
+            });
+        $("#main").bind( "click", function () {
+            $(this).tab();
+        } );
+        setTimeout(function(){
+            $("#main").trigger('click');
+        },100);
+
+
+        $('.ui.tabular.menu a.item')
+            .on('click', function() {
+                if(!$(this).hasClass('dropdown')) {
+                    $(this)
+                        .addClass('active')
+                        .closest('.ui.menu')
+                        .find('.item')
+                        .not($(this))
+                        .removeClass('active');
+                }
+            });
+        $('.ui.tiny.buttons .ui.button')
+            .on('click', function() {
+                $(this)
+                    .addClass('active')
+                $(this).siblings().removeClass('active');
+            });
+        $('.ui.tabular.menu a.item').tab();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同业理财管理</title>
+    <link rel="stylesheet" href="../css/semantic.min.css">
+</head>
+<body>
+<!--同存交易变更-->
+<div class="ui bottom attached segment" style="margin-top: 20px" >
+    <div class="ui stackable center aligned page grid">
+        <div class="ui form">
+            <div class="inline two fields">
+                <div class="field">
+                    <label>产品名称:</label>
+                    <input type="text" placeholder="报价方">
+                </div>
+            </div>
+            <div class="field">
+                <lable>产品类型：</lable>
+                <div class="ui tiny buttons">
+                    <div class="ui active button">全部</div>
+                    <div class="ui button">非保本</div>
+                    <div class="ui button">保本</div>
+                </div>
+            </div>
+
+
+            <div class="field">
+                <lable>期&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;限：</lable>
+                <div class="ui tiny buttons">
+                    <div class="ui active button">全部</div>
+                    <div class="ui button">隔夜</div>
+                    <div class="ui button">7天</div>
+                    <div class="ui button">14天</div>
+                    <div class="ui button">21天</div>
+                    <div class="ui button">3个月</div>
+                    <div class="ui button">6个月</div>
+                    <div class="ui button">12个月</div>
+                </div>
+            </div>
+
+            <div class="inline two fields">
+                <label>金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额：</label>
+                <input type="text">——<input type="text">亿&nbsp;元
+            </div>
+            <div class="inline two fields">
+                <label>利&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;率：</label>
+                <input type="text">——<input type="text">%
+            </div>
+            <div class="ui fluid primary button">查  询</div>
+        </div>
+        <table class="ui striped celled table">
+            <thead>
+            <tr>
+                <th>
+                    <div class="ui checked checkbox">
+                    <input type="checkbox" checked="">
+                    <label></label>
+                    </div>
+                </th>
+                <th>产品名称</th>
+                <th>报价方</th>
+                <th>产品类型</th>
+                <th>期限</th>
+                <th>利率</th>
+                <th>金额</th>
+                <th>状态</th>
+                <th>推荐状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="ui checked checkbox">
+                        <input type="checkbox" checked="">
+                        <label></label>
+                    </div>
+                </td>
+                <td id="licai_1" style="text-decoration:underline;cursor: pointer" >
+                    理财产品
+                </td>
+                <td>中原银行</td>
+                <td>保本</td>
+                <td>7天</td>
+                <td>4.95%</td>
+                <td>5亿元</td>
+                <td>已创建</td>
+                <td>
+                    未推荐
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ui checked checkbox">
+                        <input type="checkbox" checked="">
+                        <label></label>
+                    </div>
+                </td>
+                <td>
+                    理财产品
+                </td>
+                <td>中原银行</td>
+                <td>保本</td>
+                <td>7天</td>
+                <td>4.95%</td>
+                <td>5亿元</td>
+                <td>已创建</td>
+                <td>
+
+                        未推荐
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ui checked checkbox">
+                        <input type="checkbox" checked="">
+                        <label></label>
+                    </div>
+                </td>
+                <td>
+                    理财产品
+                </td>
+                <td>中原银行</td>
+                <td>保本</td>
+                <td>7天</td>
+                <td>4.95%</td>
+                <td>5亿元</td>
+                <td>已创建</td>
+                <td>
+
+                       未推荐
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ui checked checkbox">
+                        <input type="checkbox" checked="">
+                        <label></label>
+                    </div>
+                </td>
+                <td>
+                    理财产品
+                </td>
+                <td>中原银行</td>
+                <td>保本</td>
+                <td>7天</td>
+                <td>4.95%</td>
+                <td>5亿元</td>
+                <td>已创建</td>
+                <td>
+                        未推荐
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ui checked checkbox">
+                        <input type="checkbox" checked="">
+                        <label></label>
+                    </div>
+                </td>
+                <td>
+                    理财产品
+                </td>
+                <td>中原银行</td>
+                <td>保本</td>
+                <td>7天</td>
+                <td>4.95%</td>
+                <td>5亿元</td>
+                <td>已创建</td>
+                <td>
+
+                        未推荐
+                </td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th colspan="10">
+                    <div class="ui left floated pagination menu">
+                        <button class="ui primary floated button">上架</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ui primary floated button">下架</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ui red floated button">删除</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ui primary floated button">推荐</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ui red floated button">撤销</button>
+                    </div>
+                </th>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="10">
+                    <div class="ui right floated pagination menu">
+                        <a class="icon item">
+                            <i class="left chevron icon"></i>
+                        </a>
+                        <a class="item">1</a>
+                        <a class="item">2</a>
+                        <a class="item">3</a>
+                        <a class="item">4</a>
+                        <a class="icon item">
+                            <i class="right chevron icon"></i>
+                        </a>
+                    </div>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<div class="ui modal" id="login">
+    <i class="close icon"></i>
+    <div class="header">
+        购买意向确认
+    </div>
+    <div class="content">
+        <div class="ui bottom attached segment" style="margin-top: 20px">
+            <div class="ui aligned center page grid">
+                <div class="column">
+                    <div class="ui small form">
+                        <div class="two fields">
+                            <div class="field">
+                                <label>申请机构</label>
+                                <input placeholder="申请机构" type="text" disabled>
+                            </div>
+                            <div class="field">
+                                <label>申请机构经办人</label>
+                                <input placeholder="申请机构经办人" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>发行机构</label>
+                                <input placeholder="发行机构" type="text" disabled>
+                            </div>
+                            <div class="field">
+                                <label>发行机构经办人</label>
+                                <input placeholder="发行机构经办人" type="text" disabled>
+                            </div>
+                        </div>
+
+                        <div class="two fields">
+                            <div class="field">
+                                <label>方向</label>
+                                <input placeholder="方向" type="text" disabled>
+                            </div>
+                            <div class="field">
+                                <label>期限</label>
+                                <input placeholder="期限" type="text" disabled >
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>币种</label>
+                                <input placeholder="币种" type="text" disabled>
+                            </div>
+                            <div class="field">
+                                <label>金额</label>
+                                <input placeholder="金额" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>起息日</label>
+                                <input placeholder="起息日" type="text" disabled>
+                            </div>
+                            <div class="field">
+                                <label>到期日</label>
+                                <input placeholder="到期日" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <div class="ui input">
+                                    <input type="text" placeholder="请输入验证码">
+                                    <img src="../images/yzm.jpg" class="ui tiny image"/>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui action input">
+                                    <input type="text" placeholder="请输入验证码">
+                                    <button class="ui green button">发送短信码</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <!--<div class="ui black deny button">
+                Nope
+            </div>
+            <div class="ui positive right labeled icon button">
+                Yep, that's me
+                <i class="checkmark icon"></i>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+
+<div class="ui modal" id="licai1">
+    <i class="close icon"></i>
+    <div class="header">
+        同业存款详细
+    </div>
+    <div class="content">
+        <div class="ui bottom attached segment" style="margin-top: 20px">
+            <div class="ui aligned center page grid">
+                <div class="column">
+                    <div class="ui small form">
+                        <div class="two fields">
+                            <div class="field">
+                                <label>产品类型</label>
+                                <input placeholder="申请机构" type="text" disabled>
+                            </div>
+                            <div class="field">
+                                <label>产品名称</label>
+                                <input placeholder="申请机构经办人" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>产品币种</label>
+                                <input placeholder="发行机构" type="text" disabled>
+                            </div>
+                            <div class="field">
+                                <label>期限</label>
+                                <input placeholder="发行机构经办人" type="text" disabled>
+                            </div>
+                        </div>
+
+                        <div class="two fields">
+                            <div class="field">
+                                <label>发行机构</label>
+                                <input placeholder="方向" type="text" disabled>
+                            </div>
+                            <div class="field">
+                                <label>利率</label>
+                                <input placeholder="期限" type="text" disabled >
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>风险等级</label>
+                                <input placeholder="币种" type="text" disabled>
+                            </div>
+                            <div class="field">
+                                <label>可申购金额</label>
+                                <input placeholder="金额" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>产品状态</label>
+                                <input placeholder="起息日" type="text" disabled>
+                            </div>
+                            <div class="field">
+                                <label>推荐状态</label>
+                                <input placeholder="到期日" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>详细介绍</label>
+                                <input placeholder="起息日" type="text" disabled>
+                            </div>
+
+                        </div>
+
+                        <div class="two fields">
+                            <div class="field">
+                                <label>附件</label>
+                                <input placeholder="起息日" type="text" disabled>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <!--<div class="ui black deny button">
+                Nope
+            </div>
+            <div class="ui positive right labeled icon button">
+                Yep, that's me
+                <i class="checkmark icon"></i>
+            </div>-->
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/calendar.min.js"></script>
+<script src="../js/semantic.min.js"></script>
+<script>
+    $('#licai_1').on('click',function (e) {
+        e.preventDefault();
+        $('#licai1').modal('show');
+
+    });
+</script>
+</body>
+</html>

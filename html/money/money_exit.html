@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>持仓查询</title>
+    <<link rel="stylesheet" href="../../css/semantic.min.css">
+    <link rel="stylesheet" href="../../css/calendar.min.css">
+</head>
+<body>
+<div class="ui bottom attached segment" style="margin-top: 20px" >
+    <div class="ui stackable center aligned page grid">
+        <div class="ui form">
+            <div class="inline two fields">
+                <div class="field">
+                    <label>对手方：</label>
+                    <input type="text" placeholder="对手方">
+                </div>
+            </div>
+            <div class="inline two fields">
+                <div class="field">
+                    <label>产品名称：</label>
+                    <input type="text" placeholder="产品名称">
+                </div>
+            </div>
+            <div class="field">
+                <lable>保本性质：</lable>
+                <div class="ui tiny buttons">
+                    <div class="ui active button">全部</div>
+                    <div class="ui button">非保本</div>
+                    <div class="ui button">保本</div>
+                </div>
+            </div>
+
+            <div class="field">
+                <lable>期限：</lable>
+                <div class="ui tiny buttons">
+                    <div class="ui active button">全部</div>
+                    <div class="ui button">35天以内</div>
+                    <div class="ui button">36-95天</div>
+                    <div class="ui button">95-185天</div>
+                    <div class="ui button">186-365天</div>
+                    <div class="ui button">365天以上</div>
+                </div>
+            </div>
+
+            <div class="inline two fields">
+                <label>金&nbsp;额：</label>
+                <input type="text">——<input type="text">亿&nbsp;元
+            </div>
+            <div class="inline two fields">
+                <label>利 率：</label>
+                <input type="text">——<input type="text">%
+            </div>
+            <div class="inline two fields">
+                <label>交易时间：</label>
+                <input type="text">——<input type="text">%
+            </div>
+            <div class="three buttons">
+                <div class="ui  primary button">导出产品信息</div>
+                <div class="ui primary button">导出申请信息</div>
+                <div class="ui primary button">导入成交信息</div>
+            </div>
+
+        </div>
+        <table class="ui striped celled table">
+            <thead>
+            <tr>
+                <th>产品名称</th>
+                <th>报价方</th>
+                <th>保本性质</th>
+                <th>期限</th>
+                <th>利率</th>
+                <th>金额</th>
+                <th>起息日</th>
+                <th>交易时间</th>
+                <th>状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    测试
+                </td>
+                <td>中原银行</td>
+                <td>保本</td>
+                <td>r2</td>
+                <td>35天</td>
+                <td>4.95%</td>
+                <td>5亿元</td>
+                <td>2017-08-11</td>
+                <td>2017-08-11</td>
+                <td>待确认</td>
+
+            </tr>
+            <tr>
+                <td>
+                    测试
+                </td>
+                <td>中原银行</td>
+                <td>保本</td>
+                <td>r2</td>
+                <td>35天</td>
+                <td>4.95%</td>
+                <td>5亿元</td>
+                <td>2017-08-11</td>
+                <td>2017-08-11</td>
+                <td>待确认</td>
+            </tr>
+            <tr>
+                <td>
+                    测试
+                </td>
+                <td>中原银行</td>
+                <td>保本</td>
+                <td>r2</td>
+                <td>35天</td>
+                <td>4.95%</td>
+                <td>5亿元</td>
+                <td>2017-08-11</td>
+                <td>2017-08-11</td>
+                <td>待确认</td>
+            </tr>
+            <tr>
+                <td>
+                    测试
+                </td>
+                <td>中原银行</td>
+                <td>保本</td>
+                <td>r2</td>
+                <td>35天</td>
+                <td>4.95%</td>
+                <td>5亿元</td>
+                <td>2017-08-11</td>
+                <td>2017-08-11</td>
+                <td>待确认</td>
+            </tr>
+            <tr>
+                <td>
+                    测试
+                </td>
+                <td>中原银行</td>
+                <td>保本</td>
+                <td>r2</td>
+                <td>35天</td>
+                <td>4.95%</td>
+                <td>5亿元</td>
+                <td>2017-08-11</td>
+                <td>2017-08-11</td>
+                <td>待确认</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="10">
+                    <div class="ui right floated pagination menu">
+                        <a class="icon item">
+                            <i class="left chevron icon"></i>
+                        </a>
+                        <a class="item">1</a>
+                        <a class="item">2</a>
+                        <a class="item">3</a>
+                        <a class="item">4</a>
+                        <a class="icon item">
+                            <i class="right chevron icon"></i>
+                        </a>
+                    </div>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/semantic.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同业理财产品信息录入</title>
+    <link rel="stylesheet" href="../css/semantic.min.css">
+    <!--<link rel="stylesheet" href="../css/calendar.min.css">-->
+</head>
+<body>
+<div class="ui bottom attached segment" style="margin-top: 20px">
+    <div class="ui aligned center page grid">
+        <div class="column">
+            <div class="ui fluid ordered steps">
+                <div class="completed step">
+                    <div class="content">
+                        <div class="title">录入信息</div>
+                        <div class="description">同业理财产品信息录入</div>
+                    </div>
+                </div>
+                <div class="active step">
+                    <div class="content">
+                        <div class="title">确认信息</div>
+                        <div class="description">同业理财产品信息确认</div>
+                    </div>
+                </div>
+                <div class="active step">
+                    <div class="content">
+                        <div class="title">完成</div>
+                        <div class="description">同业理财产品创建结果</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui small form">
+                <div class="two fields">
+                    <div class="field">
+                        <label><a style="color:#FFFF37;font-size:15px">*</a>产品名称</label>
+                        <input placeholder="产品名称" type="text">
+                    </div>
+                    <div class="field">
+                        <label><a style="color:#FFFF37;font-size:15px">*</a>产品类型</label>
+                        <div class="ui  floated primary submit button" style="width: 100px;">收</div>
+                        <a>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <div class="ui  floated  submit button" style="width: 100px;">出</div>
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label><a style="color:#FFFF37;font-size:15px">*</a>产品币种</label>
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="gender" data-filtered="filtered">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">人民币</div>
+                            <div class="menu" data-filtered="filtered">
+                                <div class="item" data-value="1" data-filtered="filtered">1</div>
+                                <div class="item" data-value="0" data-filtered="filtered">2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label><a style="color:#FFFF37;font-size:15px">*</a>产品期限</label>
+                        <input placeholder="产品期限" type="text">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label><a style="color:#FFFF37;font-size:15px">*</a>风险等级</label>
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="gender" data-filtered="filtered">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">人民币</div>
+                            <div class="menu" data-filtered="filtered">
+                                <div class="item" data-value="1" data-filtered="filtered">1</div>
+                                <div class="item" data-value="0" data-filtered="filtered">2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label><a style="color:#FFFF37;font-size:15px">*</a>发行机构</label>
+                        <input placeholder="发行机构" type="text">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label><a style="color:#FFFF37;font-size:15px">*</a>发行总额度</label>
+                        <input placeholder="发行总额度" type="text">
+                    </div>
+                    <div class="field">
+                        <label>大写金额</label>
+                        <input placeholder="大写金额" type="text">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label><a style="color:#FFFF37;font-size:15px">*</a>起购金额</label>
+                        <input placeholder="起购金额" type="text">
+                    </div>
+                    <div class="field">
+                        <label>大写金额</label>
+                        <input placeholder="大写金额" type="text">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label><a style="color:#FFFF37;font-size:15px">*</a>起始利率</label>
+                        <input placeholder="起始利率" type="text">
+                    </div>
+                    <div class="field">
+                        <label><a style="color:#FFFF37;font-size:15px">*</a>截止利率</label>
+                        <input placeholder="截止利率" type="text">
+                    </div>
+                </div>
+
+                <div class="two fields">
+                    <div class="field">
+                        <label>报价描述</label>
+                        <textarea class="text" cols="" rows="">
+                    </textarea>
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>报价附件</label>
+                        <div class="ui right labeled input">
+                            <input type="text" placeholder="附件">
+                            <div class="ui  blue label">
+                                <div class="text" id="cunkuan_1">上传附件...</div>
+
+                                <div class="menu" data-filtered="filtered">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="ui left floated submit button">返  回</div>
+                <div class="ui right floated primary submit button">下一步</div>
+            </div>
+        </div>
+    </div>
+    <div class="ui modal" id="cunkuan1">
+        <i class="close icon"></i>
+        <div class="header">
+            同业存款产品导入
+        </div>
+        <div class="content">
+            <div class="ui bottom attached segment" style="margin-top: 20px">
+                <div class="ui aligned center page grid">
+                    <div class="ui eight column grid">
+                        <div class="three column row">
+                            <div class="column">
+                                <nobr>批量导入同业存款报价信息:</nobr>
+                            </div>
+                            <div class="five column row">
+                                <div class="column">
+                                    <div class="ui right labeled input">
+                                        <input type="text" placeholder="点击选择文件">
+                                        <div class="ui  blue label">
+                                            <div class="text">选择文件...</div>
+
+                                            <div class="menu">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  style="text-align:center; width:100%;height:100%;margin:0px; "  >
+                <button class="ui primary floated button">提交</button>
+            </div>
+</body>
+</html>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/calendar.min.js"></script>
+<script src="../js/semantic.min.js"></script>
+<script>
+    $('#cunkuan_1').on('click',function (e) {
+        e.preventDefault();
+        $('#cunkuan1').modal('show');
+    });
+    $('#cunkuan_1').on('click',function (e) {
+        e.preventDefault();
+        $('#cunkuan1').modal('show');
+    });
+    $('.ui.dropdown')
+        .dropdown({
+            allowAdditions: true
+        });
+</script>

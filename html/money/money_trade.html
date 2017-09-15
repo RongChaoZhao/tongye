@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>理财交易管理</title>
+    <link rel="stylesheet" href="../../css/semantic.min.css">
+</head>
+<body>
+<div class="ui bottom attached segment">
+    <div class="ui stackable center aligned page grid">
+        <div class="ui form">
+            <div class="inline two fields">
+                <div class="field">
+                    <label>报价方：</label>
+                    <input type="text" placeholder="报价方">
+                </div>
+                <div class="field">
+                    <label>产品名：</label>
+                    <input type="text" placeholder="产品名称">
+                </div>
+                <!--<div class="ui blue button">查&nbsp;询</div>-->
+            </div>
+            <div class="field">
+                <lable>保本性质：</lable>
+                <div class="ui tiny buttons">
+                    <div class="ui active button">全部</div>
+                    <div class="ui button">保本</div>
+                    <div class="ui button">非保本</div>
+                </div>
+            </div>
+            <div class="field">
+                <lable>期&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;限：</lable>
+                <div class="ui tiny buttons">
+                    <div class="ui active button">35天以内</div>
+                    <div class="ui button">36-95天</div>
+                    <div class="ui button">95-185天</div>
+                    <div class="ui button">186-365天</div>
+                    <div class="ui button">365天以上</div>
+                </div>
+            </div>
+            <div class="field">
+                <lable>产品范围：</lable>
+                <div class="ui tiny buttons">
+                    <div class="ui active button">全部</div>
+                    <div class="ui button">推荐</div>
+                </div>
+            </div>
+            <div class="inline two fields">
+                <label>金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额：</label>
+                <input type="text">——<input type="text">亿&nbsp;元
+            </div>
+            <div class="inline two fields">
+                <label>利&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;率：</label>
+                <input type="text">——<input type="text">%
+            </div>
+            <div class="ui fluid primary button">查  询</div>
+        </div>
+        <table class="ui striped celled table">
+            <thead>
+            <tr>
+                <th>产品名称</th>
+                <th>报价方</th>
+                <th>期限</th>
+                <th>利率</th>
+                <th>申购金额</th>
+                <th>起息日</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    测试
+                </td>
+                <td>中原银行股份有限公司</td>
+                <td>365天</td>
+                <td>4.95%</td>
+                <td>4亿元</td>
+                <td>2017-08-11</td>
+                <td>已申请</td>
+                <td>
+                    <div class="ui stackable buttons">
+                        <button class="ui button" data-tooltip="再次协商" data-position="top center"> 再次协商 </button>
+                        <button class="ui green button" data-tooltip="确认" data-position="top center"> 确认 </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    测试
+                </td>
+                <td>中原银行股份有限公司</td>
+                <td>365天</td>
+                <td>4.95%</td>
+                <td>4亿元</td>
+                <td>2017-08-11</td>
+                <td>已申请</td>
+                <td>
+                    <div class="ui stackable buttons">
+                        <button class="ui button" data-tooltip="再次协商" data-position="top center"> 再次协商 </button>
+                        <button class="ui green button" data-tooltip="确认" data-position="top center"> 确认 </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    测试
+                </td>
+                <td>中原银行股份有限公司</td>
+                <td>365天</td>
+                <td>4.95%</td>
+                <td>4亿元</td>
+                <td>2017-08-11</td>
+                <td>已申请</td>
+                <td>
+                    <div class="ui stackable buttons">
+                        <button class="ui button" data-tooltip="再次协商" data-position="top center"> 再次协商 </button>
+                        <button class="ui green button" data-tooltip="确认" data-position="top center"> 确认 </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="9">
+                    <div class="ui right floated pagination menu">
+                        <a class="icon item">
+                            <i class="left chevron icon"></i>
+                        </a>
+                        <a class="item">1</a>
+                        <a class="item">2</a>
+                        <a class="item">3</a>
+                        <a class="item">4</a>
+                        <a class="icon item">
+                            <i class="right chevron icon"></i>
+                        </a>
+                    </div>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+</body>
+</html>
